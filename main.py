@@ -18,13 +18,14 @@ st.title('Appclick Insurance App')
 column1, column2 = st.columns(2)
 with column1:
     age = st.text_input(label='age')
-    children = st.text_input(label='children')
     bmi = st.text_input(label='bmi')
+    children = st.slider(label='children', max_value= 20)
 
 with column2:
-    smoker = st.text_input(label='smoker')
-    region = st.text_input(label='region')
-    sex = st.text_input(label='sex')
+    smoker = st.selectbox(label='smoker', options=['yes', 'no'])
+    region = st.selectbox(label='region', options=['southeast', 
+                                                   'southwest','northeast','northwest'])
+    sex = st.selectbox(label='sex', options=['male', 'female'])
     
 
 try:
